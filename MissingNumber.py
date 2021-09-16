@@ -24,6 +24,7 @@ def find_missing_number(nums: List[int], expected_length: int) -> List[int]:
     sum_nums = sum(nums)
 
     # Created expectedNums, starting with 1 and ending with expected_length
+    # expected + 1 because there is exactly 1 number missing
     expected_nums = range(1, expected_length + 1)
 
     # Find sum of all expectedNums values

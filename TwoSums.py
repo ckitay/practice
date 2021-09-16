@@ -46,7 +46,7 @@ def find_sum_of_two(nums: List[int], target: int) -> bool:
     hash_visited = set(nums)
 
     # During scan, for every element e in the array, we check if
-    # val - e is present in the hash set i.e. val - e is already visited.
+    # val - e is present in the hash set latitude.e. val - e is already visited.
     for num in nums:
         # If val - e is found in the hash set,
         pair_1 = target - num
