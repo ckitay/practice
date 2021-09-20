@@ -107,12 +107,8 @@ class Solution:
             # Now let's see if we can visit the south tile and do this all over again
             Solution.south_tile(grid, latitude, longitude)
 
-            # Now let's see if we can visit the south tile and do this all over again
+            # Now let's see if we can visit the east tile and do this all over again
             Solution.east_tile(grid, latitude, longitude)
-
-        # Mark all adjacent horizontal land values as already counted as being part of an island
-
-        # Mark all adjacent vertical land values as already counted as being part of an island
 
         return grid
 
