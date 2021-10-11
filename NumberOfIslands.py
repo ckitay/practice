@@ -53,8 +53,30 @@ class Test(TestCase):
 
         self.assertEqual(2, Solution.numIslands(self, grid))
 
+    # 21 seconds memory error
+    def test6(self):
+        m = 0
+        n = 0
+
+        row_one = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
+        water_row = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0","0", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+        grid = [row_one, water_row]
+
+        # n = 300 hard-coded
+        row_repeat = ["1", "0", "1", "1", "1", "1", "1", "1", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1","1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
+
+        while m <= 300:
+            grid.append(row_repeat)
+            m += 1
+
+        self.assertEqual(4, Solution.numIslands(self, grid))
+
 
 class Solution:
+    # Big O Notation Performance metric?. E.g. if n=300 or grid limit size is 300 x 300
+    # then we shouldn't be visiting more than 300 x 300 tiles?
+    # ToDo: Create a stress this so tiles_visit_count gets hit nearly 90,000 times?
+    tiles_visted_count = 0
 
     def numIslands(self, grid: List[List[str]]) -> int:
         # 0 = water
@@ -80,37 +102,40 @@ class Solution:
 
                 # If tile is land and # don't count the islands we already visited
                 if Solution.is_land(tile) and not Solution.is_island_visited(tile):
-
                     # We know there is new island here
                     island_count += 1
 
-                    # Mark all connected land as island that we already visisted
+                    # Mark all connected land as island that we already visited
                     Solution.dfs_visit_all_tiles_in_island(grid, latitude, longitude)
 
                 longitude += 1
 
             latitude += 1
+
+        print('Tiles visited: ' + str(Solution.tiles_visted_count))
+
         return island_count
 
     # Now lets use DFS recursion to visit all the horizontal and vertical tiles so
     # that we can mark them as counted
-    def dfs_visit_all_tiles_in_island(grid: List[List[str]], latitude: int, longitude: int):
+    def dfs_visit_all_tiles_in_island(self: List[List[str]], latitude: int, longitude: int):
 
-        tile = grid[latitude][longitude]
+        tile = self[latitude][longitude]
 
         # We don't want to keep re-visiting the same tiles
         if not Solution.is_island_visited(tile):
-
             # Hurray! We are now visiting tile on this island and marking it by sticking a flag in it or something.
-            grid[latitude][longitude] = "2"
+            self[latitude][longitude] = "2"
+
+            Solution.tiles_visted_count += 1
 
             # Now let's see if we can visit the south tile and do this all over again
-            Solution.south_tile(grid, latitude, longitude)
+            Solution.south_tile(self, latitude, longitude)
 
             # Now let's see if we can visit the east tile and do this all over again
-            Solution.east_tile(grid, latitude, longitude)
+            Solution.east_tile(self, latitude, longitude)
 
-        return grid
+        return self
 
     def is_land(tile: str) -> bool:
         if tile == 1:
@@ -125,8 +150,8 @@ class Solution:
             return True
         elif tile == "2":
             return True
-        #elif Solution.is_water_look(tile):
-            #return True
+        # elif Solution.is_water_look(tile):
+        # return True
         else:
             return False
 
